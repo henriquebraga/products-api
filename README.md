@@ -4,8 +4,8 @@ Clojure API to products
 
 # Implement
 
-[] Categories
-[] Products
+[ ] Categories
+[ ] Products
 
 # Tests
 
@@ -16,6 +16,20 @@ lein test
 ```
 lein cloverage
 ```
+
+# Run server
+
+
+```
+lein run-dev
+```
+
+Test if server is up and running
+
+```
+curl -i http://127.0.0.1:8080/healthcheck
+```
+
 
 ## License
 
