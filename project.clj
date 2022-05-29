@@ -9,4 +9,6 @@
                  [io.pedestal/pedestal.service       "0.5.10"]
                  [io.pedestal/pedestal.jetty         "0.5.10"]
                  ]
+  :dev-dependencies [[midje "1.4.0" :exclusions [org.clojure/clojure]]
+                     [lein-midje "1.0.10"]]
   :repl-options {:init-ns products-api.core})
