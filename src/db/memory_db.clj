@@ -3,10 +3,9 @@
 
 (defonce db (atom {:category {}}))
 
-;(defn upsert-category! [category]
-;  (swap! db)
-;  )
-
+(defn flush-db! []
+  (swap! db dissoc :category)
+  (swap! db assoc :category {}))
 
 
 
