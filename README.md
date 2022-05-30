@@ -1,3 +1,8 @@
+
+![Travis Build](https://app.travis-ci.com/henriquebraga/products-api.svg?branch=main)
+[![codecov](https://codecov.io/gh/henriquebraga/products-api/branch/main/graph/badge.svg?token=rfykyY9hNV)](https://codecov.io/gh/henriquebraga/products-api)
+
+
 # Products API
 
 Clojure API to products
