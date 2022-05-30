@@ -1,0 +1,6 @@
+language: clojure
+lein: lein
+before_script: lein deps
+script: lein cloverage --codecov --output .
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
