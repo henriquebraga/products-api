@@ -1,5 +1,6 @@
 (ns service-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.data.json :as json]
+            [clojure.test :refer :all]
             [io.pedestal.test :refer :all]
             [io.pedestal.http :as http]
             [service :as service]))
@@ -8,11 +9,8 @@
   (::http/service-fn (http/create-servlet service/service)))
 
 (deftest healthcheck-test
-  (is (=
-        (:body (response-for service :get "/healthcheck"))
-        "Service OK")
-      )
-
-  (is (=
-        (:status (response-for service :get "/healthcheck"))
-        200)))
+  (let [response (response-for service :get "/healthcheck")]
+    (is (= (json/read-str (:body response))
+           {"status" "Service OK"}))
+    (is (= (:status response)
+           200))))

@@ -1,6 +1,6 @@
 (ns controllers.healthcheck)
 
-
 (defn healthcheck
   [request]
-  {:status 200 :body (str "Service OK")})
+  {:status 200 :body {:status "Service OK"}})
+
