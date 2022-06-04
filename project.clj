@@ -10,7 +10,7 @@
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [io.pedestal/pedestal.service       "0.5.10"]
                  [io.pedestal/pedestal.jetty         "0.5.10"]
-                 ]
+                 [org.clojure/data.json "2.4.0"]]
   :repl-options {:init-ns products-api.core}
   :main http-server
   )
